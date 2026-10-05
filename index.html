@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MOKA Coffee — кофейня в Бишкеке</title>
+  <meta name="description" content="Спешелти-кофе, свежая выпечка и завтраки в Бишкеке.">
+  <link rel="canonical" href="https://example.com/">
+  <meta property="og:type" content="website"><meta property="og:title" content="MOKA Coffee"><meta property="og:description" content="Кофе, выпечка и завтраки в Бишкеке."><meta property="og:image" content="images/hero/hero.webp">
+  <meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#19130f">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2232%22 fill=%22%2319130f%22/><text x=%2232%22 y=%2241%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2230%22 fill=%22%23d8ad66%22>M</text></svg>">
+  <link rel="preload" as="image" href="images/hero/hero.webp" fetchpriority="high">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script><script src="script.js" defer></script>
+</head>
+<body>
+  <div class="intro" aria-hidden="true"><div class="intro-mark">MOKA</div><div class="intro-line"></div></div>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header" id="header">
+    <a class="logo" href="#home" data-text="shortName">MOKA</a>
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#about">О нас</a><a href="#menu">Меню</a><a href="#gallery">Галерея</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a>
+    </nav>
+    <a class="header-route" href="#contacts">Бишкек <span>↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-label="Главный экран">
+      <img class="hero-image" id="hero-image" alt="Чашка кофе в интерьере MOKA Coffee" fetchpriority="high">
+      <div class="hero-shade"></div><div class="hero-grain"></div>
+      <div class="hero-content">
+        <p class="hero-kicker" data-text="subtitle"></p>
+        <h1 data-text="heroName"></h1>
+        <div class="hero-bottom"><p class="hero-slogan" data-text="slogan"></p><div class="hero-actions"><a class="button button-light" href="#menu" data-cta="viewMenu"></a><a class="button button-ghost" data-link="route" data-cta="directions"></a></div></div>
+      </div>
+      <p class="hero-side">SPECIALTY COFFEE · BISHKEK · <span data-text="year"></span></p>
+      <a class="scroll-cue" href="#about" aria-label="Прокрутить к разделу О нас"><span></span>листайте</a>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="section-no">01</div>
+      <div class="about-copy reveal"><p class="eyebrow">О кофейне</p><h2 data-text="aboutTitle"></h2><p class="lead" data-text="aboutText"></p><div class="signature">made with care, daily</div></div>
+      <figure class="about-visual reveal"><img id="about-image" alt="Бариста MOKA готовит кофе" loading="lazy"><figcaption>Кофе как ремесло</figcaption></figure>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section class="menu section dark" id="menu">
+      <div class="section-no">02</div>
+      <div class="section-heading reveal"><p class="eyebrow">Наше меню</p><h2>Знакомые вкусы.<br><em>Точное исполнение.</em></h2></div>
+      <div class="menu-layout">
+        <div class="menu-tabs" id="menu-tabs" role="tablist" aria-label="Категории меню"></div>
+        <div class="menu-list" id="menu-list" role="tabpanel" aria-live="polite"></div>
+      </div>
+      <p class="menu-note">Цены указаны в сомах · Актуальный выбор десертов уточняйте у бариста</p>
+    </section>
+
+    <section class="popular section" aria-labelledby="popular-title">
+      <div class="section-no">03</div>
+      <div class="section-heading reveal"><p class="eyebrow">Выбор гостей</p><h2 id="popular-title">Worth a taste</h2></div>
+      <div class="popular-grid" id="popular-grid"></div>
+    </section>
+
+    <section class="promo" id="promo"><img id="promo-image" alt="Завтрак в MOKA Coffee" loading="lazy"><div class="promo-overlay"></div><div class="promo-content reveal"><p class="eyebrow" id="promo-eyebrow"></p><h2 id="promo-title"></h2><p id="promo-text"></p><a class="button button-light" data-link="whatsapp" id="promo-cta"></a></div><div class="promo-stamp">MOKA<br>CLUB</div></section>
+
+    <section class="gallery section" id="gallery">
+      <div class="section-no">04</div><div class="section-heading reveal"><p class="eyebrow">Галерея</p><h2>Внутри MOKA</h2></div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </section>
+
+    <section class="reviews section dark" id="reviews">
+      <div class="section-no">05</div><div class="reviews-head reveal"><p class="eyebrow">Отзывы</p><h2>Говорят наши гости</h2><p>Листайте, чтобы прочитать больше</p></div>
+      <div class="reviews-track" id="reviews-track"></div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="contact-top"><p class="eyebrow">До встречи</p><h2 data-text="shortName"></h2><p class="contact-tagline" data-text="slogan"></p></div>
+      <div class="contact-grid">
+        <div><span>Адрес</span><strong data-text="city"></strong><a data-link="route" data-text="address"></a></div>
+        <div><span>Часы</span><strong data-text="days"></strong><p data-text="hours"></p></div>
+        <div><span>Связаться</span><a data-link="phone" data-text="phone"></a><a data-link="instagram" data-text="instagram"></a></div>
+      </div>
+      <div class="contact-actions"><a class="button button-dark" data-link="phone" data-cta="call"></a><a class="button button-dark" data-link="whatsapp" data-cta="whatsapp"></a><a class="button button-dark" data-link="instagram" data-cta="instagram"></a><a class="button button-gold" data-link="route" data-cta="route"></a></div>
+      <footer><span>© <span data-text="year"></span> <span data-text="businessName"></span></span><a href="#home">Наверх ↑</a></footer>
+    </section>
+  </main>
+
+  <div class="mobile-bar"><a data-link="phone"><span>☎</span>Позвонить</a><a data-link="whatsapp"><span>↗</span>WhatsApp</a><a data-link="route"><span>⌖</span>Маршрут</a></div>
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" aria-hidden="true"><button class="lightbox-close" aria-label="Закрыть">×</button><button class="lightbox-prev" aria-label="Предыдущее фото">←</button><figure><img alt=""><figcaption></figcaption></figure><button class="lightbox-next" aria-label="Следующее фото">→</button></div>
+  <script type="application/ld+json" id="schema"></script>
+</body>
+</html>
