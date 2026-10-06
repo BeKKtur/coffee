@@ -10,19 +10,19 @@
   <meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#19130f">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2232%22 fill=%22%2319130f%22/><text x=%2232%22 y=%2241%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2230%22 fill=%22%23d8ad66%22>M</text></svg>">
   <link rel="preload" as="image" href="images/hero/hero.webp" fetchpriority="high">
-  <link rel="stylesheet" href="style.css">
-  <script src="data.js" defer></script><script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=3">
+  <script src="data.js?v=3" defer></script><script src="script.js?v=3" defer></script>
 </head>
 <body>
   <div class="intro" aria-hidden="true"><div class="intro-mark">MOKA</div><div class="intro-line"></div></div>
   <a class="skip-link" href="#main">Перейти к содержимому</a>
   <header class="site-header" id="header">
     <a class="logo" href="#home" data-text="shortName">MOKA</a>
-    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
-    <nav class="nav" aria-label="Основная навигация">
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+    <nav class="nav" id="mobile-nav" aria-label="Основная навигация">
       <a href="#about">О нас</a><a href="#menu">Меню</a><a href="#gallery">Галерея</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a>
     </nav>
-    <a class="header-route" href="#contacts">Бишкек <span>↗</span></a>
+    <a class="header-route" href="#contacts">Бишкек <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></a>
   </header>
 
   <main id="main">
@@ -69,8 +69,24 @@
     </section>
 
     <section class="reviews section dark" id="reviews">
-      <div class="section-no">05</div><div class="reviews-head reveal"><p class="eyebrow">Отзывы</p><h2>Говорят наши гости</h2><p>Листайте, чтобы прочитать больше</p></div>
-      <div class="reviews-track" id="reviews-track"></div>
+      <div class="section-no">05</div>
+      <div class="reviews-head reveal"><p class="eyebrow">Отзывы</p><h2>Говорят наши гости</h2></div>
+      <div class="reviews-slider reveal" aria-roledescription="карусель" aria-label="Отзывы гостей">
+        <div class="reviews-viewport" id="reviews-viewport">
+          <div class="reviews-track" id="reviews-track"></div>
+        </div>
+        <div class="reviews-footer">
+          <div class="reviews-counter" aria-live="polite"><span id="reviews-current">01</span><span class="reviews-counter-line"></span><span id="reviews-total">01</span></div>
+          <div class="reviews-controls">
+            <button class="reviews-arrow reviews-prev" type="button" aria-label="Предыдущий отзыв">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 6.5-5.5 5.5 5.5 5.5M9 12h11"/></svg>
+            </button>
+            <button class="reviews-arrow reviews-next" type="button" aria-label="Следующий отзыв">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 6.5 5.5 5.5-5.5 5.5M15 12H4"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="contacts" id="contacts">
@@ -81,7 +97,7 @@
         <div><span>Связаться</span><a data-link="phone" data-text="phone"></a><a data-link="instagram" data-text="instagram"></a></div>
       </div>
       <div class="contact-actions"><a class="button button-dark" data-link="phone" data-cta="call"></a><a class="button button-dark" data-link="whatsapp" data-cta="whatsapp"></a><a class="button button-dark" data-link="instagram" data-cta="instagram"></a><a class="button button-gold" data-link="route" data-cta="route"></a></div>
-      <footer><span>© <span data-text="year"></span> <span data-text="businessName"></span></span><a href="#home">Наверх ↑</a></footer>
+      <footer><span>© <span data-text="year"></span> <span data-text="businessName"></span></span><a href="#home">Наверх <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"/></svg></a></footer>
     </section>
   </main>
 
@@ -95,11 +111,11 @@
       <span>WhatsApp</span>
     </a>
     <a data-link="route" aria-label="Построить маршрут">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m20.2 3.8-7.1 16.4-2.4-6.9-6.9-2.4 16.4-7.1Z"/><path d="m10.7 13.3 4-4"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
       <span>Маршрут</span>
     </a>
   </div>
-  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" aria-hidden="true"><button class="lightbox-close" aria-label="Закрыть">×</button><button class="lightbox-prev" aria-label="Предыдущее фото">←</button><figure><img alt=""><figcaption></figcaption></figure><button class="lightbox-next" aria-label="Следующее фото">→</button></div>
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" aria-hidden="true"><button class="lightbox-close" aria-label="Закрыть"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button><button class="lightbox-prev" aria-label="Предыдущее фото"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 6.5-5.5 5.5 5.5 5.5M9 12h11"/></svg></button><figure><img alt=""><figcaption></figcaption></figure><button class="lightbox-next" aria-label="Следующее фото"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 6.5 5.5 5.5-5.5 5.5M15 12H4"/></svg></button></div>
   <script type="application/ld+json" id="schema"></script>
 </body>
 </html>
